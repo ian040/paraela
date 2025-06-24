@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #fff0f5, #ffe6e6);
+  font-family: 'Segoe UI', sans-serif;
+  color: #880E4F;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.3em;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+button {
+  background: #f48fb1;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ec407a;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 1.1em;
+}
+
+/* Flor estilo frangipani */
+.flower {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -60px;
+  animation: float 10s linear infinite;
+  z-index: 0;
+}
+
+.petal {
+  width: 20px;
+  height: 40px;
+  background: radial-gradient(circle at 30% 30%, #fff9c4, #f8bbd0);
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  transform-origin: bottom center;
+}
+
+.petal:nth-child(1) { transform: rotate(0deg) translateY(-20px); }
+.petal:nth-child(2) { transform: rotate(72deg) translateY(-20px); }
+.petal:nth-child(3) { transform: rotate(144deg) translateY(-20px); }
+.petal:nth-child(4) { transform: rotate(216deg) translateY(-20px); }
+.petal:nth-child(5) { transform: rotate(288deg) translateY(-20px); }
+
+.center {
+  width: 12px;
+  height: 12px;
+  background: #f48fb1;
+  border-radius: 50%;
+  position: absolute;
+  top: 19px;
+  left: 19px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-60px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(40px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Posições variadas */
+.flower:nth-child(1) { left: 5%; animation-delay: 0s; }
+.flower:nth-child(2) { left: 20%; animation-delay: 2s; }
+.flower:nth-child(3) { left: 40%; animation-delay: 4s; }
+.flower:nth-child(4) { left: 60%; animation-delay: 1s; }
+.flower:nth-child(5) { left: 80%; animation-delay: 3s; }
